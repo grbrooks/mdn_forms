@@ -19,3 +19,12 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #999;
 }
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+button {
+    margin-left: 5em;
+}
