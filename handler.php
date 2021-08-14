@@ -1,9 +1,12 @@
 
 <?php 
+require_once 'QuickForm.php';
  $name = $_POST['user_name'];
  $email_address = $_POST['user_email'];
  $message=$_POST['user_message'];
  echo "<h2>Your name: $name</h2><br>";
-echo "<h2>Your Email: $email_address<br></h2>";
- echo"<h3>Message :$message</h3>";
- 
+ if(empty($_POST['email_address'])){
+     echo 'An email required';
+ }else{
+     echo <h2>$email_address</h2>
+ }
