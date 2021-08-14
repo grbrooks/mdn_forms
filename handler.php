@@ -11,8 +11,13 @@ if(empty($_POST['user_email'])){
     echo '<h2>An Email required</h2>';
    
 }else{
-$eml= htmlspecialchars($_POST['user_email']);
-echo "<h2>Your email: $eml</h2>";
+$eml=$_POST['user_email'];
+if(!filter_var($eml,FILTER_VALIDATE_EMAIL)
+){
+    echo '<h2>Email must be a valid email address</h2><br>';
+
+}
+
 
 }if(empty($_POST['user_message'])){
     echo '<h2>A message required</h2>';
