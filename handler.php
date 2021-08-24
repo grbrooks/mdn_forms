@@ -16,9 +16,9 @@ if(!filter_var($eml,FILTER_VALIDATE_EMAIL)){
     echo '<h2>Email must be a valid email address</h2><br>';
 
 }
-
-
-}if(empty($_POST['user_message'])){
+echo "<h2>your email address:$eml</h2>";
+}
+if(empty($_POST['user_message'])){
     echo '<h2>A message required</h2>';
    
 }else{
